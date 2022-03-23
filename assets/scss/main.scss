@@ -1,0 +1,342 @@
+
+.btn{
+    padding: 14px 20px;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+}
+.btn__gift-logo{
+    width: 15px;
+    margin-right: 6px;
+}
+.btn__rocket-logo{
+    width: 15px;
+    margin-right: 6px;
+}                                      
+.btn__bell-logo{
+    width: 18px;
+}
+.btn__avatar-logo{
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    border-radius: 25px;
+}
+.btn--primary{
+    color: $color-white;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+}
+.btn--secondary{
+    color: $color-primary;
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+}
+.btn--bell{
+    background-color: $color-white;
+    border: 1px solid $btn-border-color;
+    padding: 12px;
+}
+.btn--avatar{
+    background-color: $color-white;
+    border: 1px solid $btn-border-color;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-wrapper{
+    width: 100%;
+    height: 100vh;
+}
+
+// Navbar
+.nav{
+    display: flex;
+    box-shadow: 0px 4px 4px 0px #D2E7FA7A;
+    height: 64px;
+}
+.nav-left{
+    width: 17%;
+    padding: 16px 0px 16px 22px;
+    border-right: 1px solid $border-color;
+}
+.nav-right{
+    width: 100%;
+    display: flex;
+    padding: 8px 8px 8px 36px;
+        &__title{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            h2{
+                font-size: $text-2xl;
+                font-weight: $font-normal;
+                color: $color-primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__menu{
+            display: flex;
+            .btn{
+                margin-right: 8px;
+            }
+        }
+    }
+// End Navbar
+
+// Main Wrapper
+.main-wrapper{
+    width: 100%;
+    height: calc(100vh - 64px);
+    display: flex;
+    margin-top: 1px;
+}
+// End Main Wrapper
+
+// Scrollbar
+.center-wrapper::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;    
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $btn-border-color;
+    border-radius: 6px;
+    &:hover{
+        background-color: $text-light-grey;
+    }
+}
+// End Scrollbar
+
+// Center
+.center-wrapper{
+    width: 970px;
+    padding: 26px 30px 0 30px;
+    // height: calc(100vh - 64px);
+    overflow: auto;
+}
+.add-document-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 142px;
+    background: url(../images/bg-add-document.svg)no-repeat top;
+    background-size: cover;
+    border-radius: $border-radius;
+    padding: 20px 30px 20px 28px;
+    .add-document__title{
+        font-size: $text-3xl;
+        font-weight: $font-bold;
+    }
+}
+.add__document{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: $font-medium;   
+    line-height: 14px;
+    color: $color-primary;
+    width: 102px;
+    height: 102px;
+    padding: 24px 16px 14px 16px;
+    border-radius: $border-radius;
+    border: 1px solid $card-border-color;
+    text-align: center;
+    background-color: $add-document;
+    cursor: pointer;
+    .plus--logo{
+        width: 24px;
+        margin-bottom: 12px;
+    }
+}
+.card-dropdown-wrapper{
+    position: relative;
+}
+// Start Dropdown
+.drop-down{
+    position: absolute;
+    top: 90px;  
+    right: 8px;
+    display: none;
+    box-shadow: $border-color;
+    border: $dropdown-border;
+    border-radius: $border-radius;
+    &::after{
+        content: '';
+        position: absolute;
+        top: -41px;
+        right: 53px;
+        border-width: 20px;
+        border-style: solid;
+        border-color: transparent transparent $frame-bg-color transparent;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: -46px;
+        right: 50px;
+        border-width: 23px;
+        border-style: solid;
+        border-color: transparent transparent $dropdown-arrow-border transparent;
+    }
+}
+.card__drop-down{
+    display: flex;
+    flex-direction: column;
+    width: 374px;
+    height: 100%;
+    border-radius: $border-radius;
+    background-color: $frame-bg-color;
+    box-shadow: $box-shadow;
+    padding: 22px 20px 0px 20px;
+    margin-top: 1px solid $border-color;
+    .local__title{
+        font-size: $text-15;
+        font-weight: $font-bold;
+    }
+}
+.card-list{
+    display: flex;
+    width: 100%;
+    margin-bottom: 18px; 
+    padding: 10px;
+    border-radius: $border-radius;
+    box-shadow: 1px solid $border-color;
+    transition: ease-in .2s;
+    &:hover{
+        background-color: $color-white;
+        padding: 10px;
+        box-shadow: $box-shadow;
+        cursor: pointer;
+    }
+    &__wrapper{
+        width: 75px;
+        height: 75px;
+        margin-right: 12px;
+        border-radius: $border-radius;
+        background-color: $card-bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__content{
+        width: 70%;
+    }  
+    &__title{
+        margin: 5px 0;
+        font-size: $text-15;
+        font-weight: $font-bold;
+        color: $theme-dark;
+    }
+    &__info{
+        font-size: $text-13;
+        font-weight: $font-normal;
+        color: $light-text;
+        line-height: 16px;
+    }
+}
+// End Dropdown 
+
+.add-document__title{
+    width: 450px;
+    height: 78px;
+    color: $color-primary;
+    font-size: $text-3xl;
+    line-height: 39px;
+    padding: 10px 0 14px 0;
+    &h1{
+        font-weight: $font-bold;
+    }
+}
+
+.search-document-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 2px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    .search-document-list{
+        display: flex;
+        align-items: center;
+        &__menu{
+            margin-right: 14px;
+            color: $text-light-grey;
+            font-weight: $font-medium;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: ease-in-out .2s;
+            &:hover{
+                padding: 10px 15px;
+            color: $active-color;
+            background-color: $active-bg-color;
+            border-radius: $border-radius;
+            font-weight: $font-bold;
+            }
+        }
+        &--active{
+            padding: 10px 15px;
+            color: $active-color;
+            background-color: $active-bg-color;
+            border-radius: $border-radius;
+            font-weight: $font-bold;
+        }
+    }
+    .search-document{
+        display: flex;
+        .union{
+            margin-right: 22px;
+        }
+        .union-1{
+            margin-right: 32px;
+        }
+    }
+    .search--logo{
+        width: 300px;
+        height: 38px;
+        border-radius: $border-radius;
+        border: 1px solid $border-color;
+        background: url(../images/icon-search.svg)no-repeat center right 12px $bg-search-clr;
+        padding: 10px 40px 10px 12px;
+        &:focus{
+            background-color: $color-white;
+            outline: 1px solid $active-color;
+            color: $color-primary;
+        }
+        &::placeholder{
+            font-size: $text-15;
+            color: $text-light-grey;
+        }
+    }
+}
+.bg-main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .bg__main{
+        margin-bottom: 10px;
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .bg__content{
+        width: 312px;
+        text-align: center;
+        font-size: $text-15;
+        line-height: 21px;
+        color: $text-blue-grey;
+    }
+}
+// End Center

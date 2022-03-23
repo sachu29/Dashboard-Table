@@ -1,0 +1,70 @@
+// Scrollbar
+.right-wrapper::-webkit-scrollbar{
+    width: 2px;
+    height: 2px;    
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $btn-border-color;
+    border-radius: 6px;
+    &:hover{
+        background-color: $text-light-grey;
+    }
+}
+// End Scrollbar
+
+// Right-Aside
+.right-wrapper{
+    width: 258px;
+    background-color: $aside-bg-color;
+    padding: 22px 22px 0px 22px;
+    border-left: 1px solid $border-color;
+    overflow-y: auto;
+    // overflow-x: hidden;
+    .right-quick-help{
+        width: 100%;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        .quick-help__title{
+            font-size: $text-xs;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            color: $color-primary;
+        }
+    }
+        
+}
+.right__card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 218px;
+    height: 112px;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    border: 1px solid $card-border-color;
+    box-shadow: 0px 9px 9px 0px $card-shadow;
+    margin-bottom: 12px;
+    padding: 18px 1px 15px 18px;
+    .right__card__document{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .right__card__title{
+        font-size: $text-15;
+        font-weight: $font-medium;
+        line-height: 19px;
+        color: $color-primary;
+    }
+    .right__card__link{
+        color: $active-color;
+        font-size: $text-13;
+    
+    }
+}
+// End Right-Aside
+
